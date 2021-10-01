@@ -2,10 +2,8 @@ package com.suidls.hibernate.entity;
 
 
 import lombok.Data;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -16,6 +14,9 @@ public class UserDetails {
     int userId;
     UserName userName;
     UserAddress userAddress;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    Student student;
     int age;
 
 
