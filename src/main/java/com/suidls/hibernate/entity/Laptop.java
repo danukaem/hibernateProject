@@ -1,6 +1,7 @@
 package com.suidls.hibernate.entity;
 
 import lombok.Data;
+import lombok.Generated;
 
 import javax.persistence.*;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 public class Laptop {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "laptop_id")
     int laptopId;
     String brand;
