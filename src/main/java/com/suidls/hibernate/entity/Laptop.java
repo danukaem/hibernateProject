@@ -1,8 +1,6 @@
 package com.suidls.hibernate.entity;
 
 import lombok.Data;
-import lombok.Generated;
-
 import javax.persistence.*;
 
 @Entity
@@ -16,7 +14,7 @@ public class Laptop {
     String brand;
     String color;
     int ram;
-    @Column(name = "student_id",insertable = false)
+    @Column(name = "student_id", insertable = false)
     int studentId;
 
 

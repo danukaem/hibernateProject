@@ -11,10 +11,10 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-            @Column(name = "student_id")
+    @Column(name = "student_id")
     int studentId;
     String studentName;
-    @OneToMany( cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "student_id", referencedColumnName = "student_id")
     List<Laptop> laptops;
 

@@ -5,8 +5,8 @@ import com.suidls.hibernate.entity.Student;
 import java.util.List;
 
 public interface StudentService {
-     Student saveStudent(Student student);
+    Student saveStudent(Student student);
 
-     List<Student> getStudents();
+    List<Student> getStudents();
 
 }
