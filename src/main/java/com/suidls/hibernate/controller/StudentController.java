@@ -16,10 +16,6 @@ public class StudentController {
 
     @PostMapping("/saveStudent")
     public Student saveStudent(@RequestBody Student student) {
-
-        student.setLaptops(student.getLaptops());
-
-        System.out.println(student);
         return studentService.saveStudent(student);
     }
 

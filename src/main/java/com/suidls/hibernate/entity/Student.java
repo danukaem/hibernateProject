@@ -3,7 +3,6 @@ package com.suidls.hibernate.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,10 +14,8 @@ public class Student {
             @Column(name = "student_id")
     int studentId;
     String studentName;
-//    @OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @OneToMany( cascade = CascadeType.ALL)
     @JoinColumn(name = "student_id", referencedColumnName = "student_id")
-
     List<Laptop> laptops;
 
 

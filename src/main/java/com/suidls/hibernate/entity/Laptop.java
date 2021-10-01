@@ -9,15 +9,11 @@ import javax.persistence.*;
 public class Laptop {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "laptop_id")
     int laptopId;
     String brand;
     String color;
     int ram;
-//    @ManyToOne( fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    Student student;
-
     @Column(name = "student_id",insertable = false)
     int studentId;
 
