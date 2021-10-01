@@ -17,6 +17,7 @@ public class Student {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "student_id", referencedColumnName = "student_id")
     List<Laptop> laptops;
+    UserAddress userAddress;
 
 
     @Override
