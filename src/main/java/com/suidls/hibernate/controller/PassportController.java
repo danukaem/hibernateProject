@@ -39,14 +39,18 @@ public class PassportController {
         return passportRepository.bbbByCountry("canada");
     }
 
-    @GetMapping("/ccc")
-    public List<PassportDetail> ccc() {
-        return passportRepository.cccByCountry("canada");
-    }
-
-    @GetMapping("/ddd")
-    public List<PassportDetail> ddd() {
-        return passportRepository.dddByCountry("kasun");
+//    @GetMapping("/ccc")
+//    public List<PassportDetail> ccc() {
+//        return passportRepository.cccByCountry("canada");
+//    }
+//
+//    @GetMapping("/ddd")
+//    public List<PassportDetail> ddd() {
+//        return passportRepository.dddByCountry("kasun");
+//    }
+    @GetMapping("/eee")
+    public List<PassportDetail> eee() {
+        return passportRepository.eeeByCountry("canada");
     }
 
 }

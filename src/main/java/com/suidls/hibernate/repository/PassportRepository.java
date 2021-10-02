@@ -17,9 +17,11 @@ public interface PassportRepository extends JpaRepository<PassportDetail, Intege
     @Query(value = "select * from passport_detail pd where pd.country= ?1 ",nativeQuery = true)
     List<PassportDetail> bbbByCountry(String conty);
 
-    List<PassportDetail> cccByCountry(String conty);
+//    List<PassportDetail> cccByCountry(String conty);
 
-    List<PassportDetail> dddByCountry(String name);
+//    List<PassportDetail> dddByCountry(String name);
+
+    List<PassportDetail> eeeByCountry(String conty);
 
 
 
