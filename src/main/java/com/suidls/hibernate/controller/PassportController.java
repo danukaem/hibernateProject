@@ -29,28 +29,13 @@ public class PassportController {
         return passportService.getPassportDetails();
     }
 
-    @GetMapping("/aaa")
-    public List<PassportDetail> aaa() {
-        return passportRepository.aaaByCountry("sri lanka");
+
+    @GetMapping("/changePassport")
+    public  Integer changePassport() {
+        return passportRepository.changePassport(1,"dubai");
     }
 
-    @GetMapping("/bbb")
-    public List<PassportDetail> bbb() {
-        return passportRepository.bbbByCountry("canada");
-    }
 
-//    @GetMapping("/ccc")
-//    public List<PassportDetail> ccc() {
-//        return passportRepository.cccByCountry("canada");
-//    }
-//
-//    @GetMapping("/ddd")
-//    public List<PassportDetail> ddd() {
-//        return passportRepository.dddByCountry("kasun");
-//    }
-    @GetMapping("/eee")
-    public List<PassportDetail> eee() {
-        return passportRepository.eeeByCountry("canada");
-    }
+
 
 }
