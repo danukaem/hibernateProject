@@ -1,7 +1,6 @@
 package com.suidls.hibernate.controller;
 
 import com.suidls.hibernate.entity.Laptop;
-import com.suidls.hibernate.entity.Student;
 import com.suidls.hibernate.repository.StudentRepository;
 import com.suidls.hibernate.service.LaptopService;
 import org.springframework.beans.factory.annotation.Autowired;

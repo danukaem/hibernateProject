@@ -15,7 +15,7 @@ public class Student {
     int studentId;
     String studentName;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "student", fetch = FetchType.LAZY)
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "students", fetch = FetchType.LAZY)
     @JsonIgnore
     List<Laptop> laptops;
 
@@ -24,6 +24,7 @@ public class Student {
         return "Student{" +
                 "studentId=" + studentId +
                 ", studentName='" + studentName + '\'' +
+                ", laptops=" + laptops +
                 '}';
     }
 }

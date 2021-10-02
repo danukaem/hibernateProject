@@ -3,6 +3,7 @@ package com.suidls.hibernate.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -16,9 +17,8 @@ public class Laptop {
     String color;
     int ram;
 
-    @ManyToOne
-    @JoinColumn(name = "student_id")
-    Student student;
+    @ManyToMany
+    List<Student> students;
 
     @Override
     public String toString() {
@@ -27,7 +27,7 @@ public class Laptop {
                 ", brand='" + brand + '\'' +
                 ", color='" + color + '\'' +
                 ", ram=" + ram +
-                ", student=" + student +
+                ", students=" + students +
                 '}';
     }
 }
