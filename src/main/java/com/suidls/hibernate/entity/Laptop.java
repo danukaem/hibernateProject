@@ -1,6 +1,7 @@
 package com.suidls.hibernate.entity;
 
 import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,8 +15,10 @@ public class Laptop {
     String brand;
     String color;
     int ram;
-    @Column(name = "student_id", insertable = false)
-    int studentId;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "student_id", referencedColumnName = "student_id")
+    Student student;
 
 
     @Override
@@ -25,6 +28,7 @@ public class Laptop {
                 ", brand='" + brand + '\'' +
                 ", color='" + color + '\'' +
                 ", ram=" + ram +
+                ", student=" + student +
                 '}';
     }
 }
