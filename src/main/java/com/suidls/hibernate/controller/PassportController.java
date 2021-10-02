@@ -30,8 +30,13 @@ public class PassportController {
     }
 
     @GetMapping("/aaa")
-    public List<PassportDetail> aa() {
-        return passportRepository.getPDFromConty("sri lanka");
+    public List<PassportDetail> aaa() {
+        return passportRepository.aaaByCountry("sri lanka");
+    }
+
+    @GetMapping("/bbb")
+    public List<PassportDetail> bbb() {
+        return passportRepository.bbbByCountry("canada");
     }
 
 }

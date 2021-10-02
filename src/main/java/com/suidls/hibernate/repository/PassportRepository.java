@@ -12,6 +12,9 @@ import java.util.List;
 public interface PassportRepository extends JpaRepository<PassportDetail, Integer> {
 
     @Query(value = "select pd from PassportDetail pd where pd.country= ?1 ")
-    List<PassportDetail> getPDFromConty(String conty);
+    List<PassportDetail> aaaByCountry(String conty);
+
+    @Query(value = "select * from passport_detail pd where pd.country= ?1 ",nativeQuery = true)
+    List<PassportDetail> bbbByCountry(String conty);
 
 }
