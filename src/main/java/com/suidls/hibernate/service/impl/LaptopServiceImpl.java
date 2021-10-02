@@ -13,6 +13,7 @@ public class LaptopServiceImpl implements LaptopService {
 
     @Autowired
     LaptopRepository laptopRepository;
+
     @Override
     public Laptop saveLaptop(Laptop laptop) {
         return laptopRepository.save(laptop);

@@ -17,7 +17,6 @@ public class Laptop {
     int ram;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "student_id", referencedColumnName = "student_id")
     Student student;
 
 
