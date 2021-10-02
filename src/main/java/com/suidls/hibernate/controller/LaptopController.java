@@ -20,10 +20,6 @@ public class LaptopController {
 
     @PostMapping("/saveLaptop")
     public Laptop saveLaptop(@RequestBody Laptop laptop) {
-        if (studentRepository.findById(laptop.getStudent().getStudentId()).isPresent()) {
-            Student student = studentRepository.findById(laptop.getStudent().getStudentId()).get();
-            laptop.setStudent(student);
-        }
 
         return laptopService.saveLaptop(laptop);
     }
