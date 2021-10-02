@@ -6,6 +6,10 @@ import javax.persistence.*;
 
 @Entity
 @Data
+@NamedQueries(value = {
+        @NamedQuery(name = "PassportDetail.cccByCountry", query = "select p from PassportDetail p where p.country = ?1"),
+        @NamedQuery(name = "PassportDetail.dddByCountry", query = "select p from PassportDetail p where p.person.name = ?1")
+})
 public class PassportDetail {
 
     @Id
@@ -13,7 +17,7 @@ public class PassportDetail {
     int passportId;
     String country;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "person_id", referencedColumnName = "personId",unique = true)
+    @JoinColumn(name = "person_id", referencedColumnName = "personId", unique = true)
     Person person;
 
     @Override
