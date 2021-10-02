@@ -9,11 +9,11 @@ import javax.persistence.*;
 public class PassportDetail {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int passportId;
     String country;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "person_id", referencedColumnName = "personId")
+    @JoinColumn(name = "person_id", referencedColumnName = "personId",unique = true)
     Person person;
 
     @Override

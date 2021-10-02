@@ -2,10 +2,7 @@ package com.suidls.hibernate.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -16,6 +13,7 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int personId;
     String name;
+    @Column(length = 10,unique = true)
     String nic;
 
     @Override
